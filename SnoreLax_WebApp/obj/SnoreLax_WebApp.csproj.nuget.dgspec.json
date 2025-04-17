@@ -1,0 +1,80 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\JuliusBudrikas\\Desktop\\School\\ACIT4015\\Github\\SnoreLax\\SnoreLax_WebApp\\SnoreLax_WebApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\JuliusBudrikas\\Desktop\\School\\ACIT4015\\Github\\SnoreLax\\SnoreLax_WebApp\\SnoreLax_WebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JuliusBudrikas\\Desktop\\School\\ACIT4015\\Github\\SnoreLax\\SnoreLax_WebApp\\SnoreLax_WebApp.csproj",
+        "projectName": "SnoreLax_WebApp",
+        "projectPath": "C:\\Users\\JuliusBudrikas\\Desktop\\School\\ACIT4015\\Github\\SnoreLax\\SnoreLax_WebApp\\SnoreLax_WebApp.csproj",
+        "packagesPath": "C:\\Users\\JuliusBudrikas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JuliusBudrikas\\Desktop\\School\\ACIT4015\\Github\\SnoreLax\\SnoreLax_WebApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JuliusBudrikas\\Desktop\\NuGet.Config",
+          "C:\\Users\\JuliusBudrikas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/IngraphicAS/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.24.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

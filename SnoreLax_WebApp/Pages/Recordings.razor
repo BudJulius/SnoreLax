@@ -1,0 +1,72 @@
+@page "/recordings"
+@using Azure.Storage.Blobs
+@using Azure.Storage.Blobs.Models
+@using System.Text.RegularExpressions
+@inject IConfiguration Configuration
+@inject IJSRuntime JSRuntime
+
+<h3>Recordings</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Listen to the recording</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var blob in blobs) {
+            var (date, timeRange) = ParseBlobName(blob.Name);
+            <tr>
+                <td>@date</td>
+                <td>@timeRange</td>
+                <td>
+                    <audio controls>
+                        <source src="@GetBlobUrl(blob.Name)" type="audio/wav">
+                    </audio>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<BlobItem> blobs = new List<BlobItem>();
+    private BlobServiceClient blobServiceClient;
+    private BlobContainerClient containerClient;
+    private readonly string containerName = "sleeprecordings";
+    private string accountName = "stsnorelax";
+
+        // Gets all blobs form the container in Azure
+    protected override async Task OnInitializedAsync() {
+        string connectionString = Configuration["BLOB_CONN_STRING"] ?? throw new InvalidOperationException("BLOB_CONN_STRING is not configured.");
+        
+        blobServiceClient = new BlobServiceClient(connectionString);
+        containerClient = blobServiceClient.GetBlobContainerClient(containerName);
+        
+        blobs = containerClient.GetBlobs().ToList();
+        blobs = blobs.OrderByDescending(b => b.Name).ToList();
+    }
+
+        // parses through the blob name and extracts date and time
+    private (string date, string timeRange) ParseBlobName(string blobName) {
+        var match = Regex.Match(blobName, @"sleep_recordings/(\d{8})/rec_\d{8}__(\d{6})-(\d{6})\.wav");
+        
+        string dateStr = match.Groups[1].Value;
+        string startTimeStr = match.Groups[2].Value;
+        string endTimeStr = match.Groups[3].Value;
+        
+        string formattedDate = $"{dateStr.Substring(0, 4)}-{dateStr.Substring(4, 2)}-{dateStr.Substring(6, 2)}";
+        string formattedStartTime = $"{startTimeStr.Substring(0, 2)}:{startTimeStr.Substring(2, 2)}:{startTimeStr.Substring(4, 2)}";
+        string formattedEndTime = $"{endTimeStr.Substring(0, 2)}:{endTimeStr.Substring(2, 2)}:{endTimeStr.Substring(4, 2)}";
+        
+        return (formattedDate, $"{formattedStartTime} - {formattedEndTime}");
+    }
+
+        // used for audio embedding
+    private string GetBlobUrl(string blobName) {
+        BlobClient blobClient = containerClient.GetBlobClient(blobName);
+        return blobClient.Uri.ToString();
+    }
+}
