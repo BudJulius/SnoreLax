@@ -1,0 +1,14 @@
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\SnoreLax_WebApp.exe
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\appsettings.Development.json
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\appsettings.json
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\SnoreLax_WebApp.dll
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\SnoreLax_WebApp.deps.json
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\SnoreLax_WebApp.runtimeconfig.json
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\SnoreLax_WebApp.pdb
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\Azure.Core.dll
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\Azure.Storage.Blobs.dll
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\Azure.Storage.Common.dll
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\System.ClientModel.dll
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\System.IO.Hashing.dll
+C:\Users\JuliusBudrikas\Desktop\School\ACIT4015\Github\SnoreLax\SnoreLax_WebApp\bin\Release\net7.0\publish\System.Memory.Data.dll
